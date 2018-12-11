@@ -16,24 +16,35 @@ class _DealsMainPageState extends State<DealsMainPage> {
         length: 4,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.blue,
+            centerTitle: false,
+            backgroundColor: Colors.white,
             title: TabBar(
               isScrollable: true,
               tabs: <Widget>[
                 Tab(
-                  child: Text('Home')
+                  child: Text('Hot')
                 ),
                 Tab(
-                  child: Text('Product')
+                  child: Text('All Store')
                 ),
                 Tab(
-                  child: Text('Product')
+                  child: Text('Deals')
                 ),
                 Tab(
-                  child: Text('Product')
+                  child: Text('Products')
                 ),
               ],
+              indicatorColor: Colors.black,
+              labelColor: Colors.black,
             ),
+          ),
+          body: TabBarView(
+            children: <Widget>[
+              Icon(Icons.directions_car),
+              Text('All Store'),
+              Text('Deals'),
+              Text('Products'),
+            ],
           ),
         ),
       );
