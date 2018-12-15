@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/main/dealsMainPage.dart';
+import 'package:deals_flutter/pages/main/deals_main_page.dart';
 
 void main() => runApp(MyApp());
 

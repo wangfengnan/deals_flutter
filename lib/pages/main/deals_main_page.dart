@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:deals_flutter/pages/main/views/deals_main_category_page.dart';
+import 'package:deals_flutter/pages/main/views/deals_main_home_page.dart';
 
 class DealsMainPage extends StatefulWidget {
   @override
@@ -40,10 +42,10 @@ class _DealsMainPageState extends State<DealsMainPage> {
           ),
           body: TabBarView(
             children: <Widget>[
-              Icon(Icons.directions_car),
+              DealsMainHomePage(),
+              DealsMainCategoryPage(),
               Text('All Store'),
               Text('Deals'),
-              Text('Products'),
             ],
           ),
         ),
