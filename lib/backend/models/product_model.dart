@@ -1,4 +1,9 @@
-class DealsProductModel {
+import 'package:json_annotation/json_annotation.dart';
+
+part 'product_model.g.dart';
+
+@JsonSerializable()
+class DealsProductModel extends Object with _$DealsProductModelSerializerMixin {
   String productId;
   String merchantId;
   String productName;
@@ -21,17 +26,18 @@ class DealsProductModel {
     this.discount}
   );
 
-  factory DealsProductModel.fromJson(Map<String,dynamic> json) {
-    return DealsProductModel(
-      productId: json['pd'],
-      merchantId: json['md'],
-      productName: json['pn'],
-      imageUrl: json['iu'],
-      price: json['rpi'],
-      salesPrice: json['pi'],
-      cur: json['cur'],
-      discount: json['di'],
-      cs: json['cd'],
-    );
-  }
+  factory DealsProductModel.fromJson(Map<String, dynamic> json) => _$DealsProductModelFromJson(json);
+  // factory DealsProductModel.fromJson(Map<String,dynamic> json) {
+  //   return DealsProductModel(
+  //     productId: json['pd'],
+  //     merchantId: json['md'],
+  //     productName: json['pn'],
+  //     imageUrl: json['iu'],
+  //     price: json['rpi'],
+  //     salesPrice: json['pi'],
+  //     cur: json['cur'],
+  //     discount: json['di'],
+  //     cs: json['cd'],
+  //   );
+  // }
 }
